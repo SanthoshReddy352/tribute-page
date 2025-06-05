@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Steve Jobs Tribute Page</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+
+  <!-- External CSS file -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <main id="main">
+    <!-- We'll start adding sections inside here -->
+     <nav id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+            <a href="#hero">Steve Jobs</a>
+            </div>
+            <!-- Hamburger button -->
+            <button id="nav-toggle" aria-label="Toggle navigation">
+            &#9776;
+            </button>
+            <ul class="nav-links">
+            <li><a href="#biography">Biography</a></li>
+            <li><a href="#timeline">Timeline</a></li>
+            <li><a href="#quotes">Quotes</a></li>
+            <li><a href="#legacy">Legacy</a></li>
+            <li><a href="#resources">Resources</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section id="hero">
+      <div class="overlay"></div>
+      <div class="hero-content">
+        <h1>Steve Jobs</h1>
+        <p class="quote">“Stay Hungry. Stay Foolish.”</p>
+      </div>
+    </section>
+
+    <section id="biography" class="section-container">
+        <div class="bio-image">
+            <img src="https://static01.nyt.com/images/2016/01/03/arts/03GUIDE1/03GUIDE1-superJumbo.jpg?quality=75&auto=webp" alt="Steve Jobs portrait" />
+
+        </div>
+        <div class="bio-text">
+            <h2>Biography</h2>
+            <p>Steve Jobs was a visionary entrepreneur and inventor who co-founded Apple Inc. He revolutionized the tech industry with products like the Macintosh, iPod, iPhone, and iPad. Born in San Francisco in 1955, Jobs’ passion for technology and design led him to change the world through innovation. He also played a crucial role in Pixar Animation Studios before his passing in 2011, leaving a lasting legacy of creativity and innovation.</p>
+        </div>
+    </section>
+
+    <section id="timeline" class="section-container">
+        <h2>Timeline</h2>
+        <ul class="timeline-list">
+            <li>
+            <span class="year">1955</span>
+            <p>Steve Jobs was born in San Francisco, California.</p>
+            </li>
+            <li>
+            <span class="year">1976</span>
+            <p>Co-founded Apple Computer, Inc. with Steve Wozniak and Ronald Wayne.</p>
+            </li>
+            <li>
+            <span class="year">1985</span>
+            <p>Left Apple and founded NeXT Inc.</p>
+            </li>
+            <li>
+            <span class="year">1997</span>
+            <p>Returned to Apple as interim CEO, leading the company back to profitability.</p>
+            </li>
+            <li>
+            <span class="year">2001</span>
+            <p>Introduced the first iPod, revolutionizing portable music.</p>
+            </li>
+            <li>
+            <span class="year">2007</span>
+            <p>Launched the first iPhone, transforming the smartphone industry.</p>
+            </li>
+            <li>
+            <span class="year">2011</span>
+            <p>Passed away, leaving a profound legacy in technology and design.</p>
+            </li>
+        </ul>
+    </section>
+
+    <section id="quotes" class="section-container">
+        <h2>Inspirational Quotes</h2>
+
+        <blockquote>
+            <p>"Your work is going to fill a large part of your life, and the only way to be truly satisfied is to do what you believe is great work. And the only way to do great work is to love what you do."</p>
+            <footer>— Steve Jobs</footer>
+        </blockquote>
+
+        <blockquote>
+            <p>"Innovation distinguishes between a leader and a follower."</p>
+            <footer>— Steve Jobs</footer>
+        </blockquote>
+
+        <blockquote>
+            <p>"Stay hungry, stay foolish."</p>
+            <footer>— Steve Jobs</footer>
+        </blockquote>
+    </section>
+
+    <section id="legacy" class="section-container">
+        <h2>Legacy & Impact</h2>
+        <ul class="achievements-list">
+            <li>Co-founded Apple Inc. and revolutionized personal computing.</li>
+            <li>Introduced the Macintosh computer with a graphical user interface.</li>
+            <li>Launched revolutionary products like the iPod, iPhone, and iPad.</li>
+            <li>Transformed the music industry with iTunes and the iTunes Store.</li>
+            <li>Helped Pixar Animation Studios become a leading animation company.</li>
+            <li>Inducted into the California Hall of Fame and awarded numerous honors.</li>
+        </ul>
+    </section>
+
+    <section id="resources" class="section-container">
+        <h2>Learn More About Steve Jobs</h2>
+        <ul class="resources-list">
+            <li><a href="https://www.apple.com/stevejobs/" target="_blank" rel="noopener noreferrer">Official Apple Tribute</a></li>
+            <li><a href="https://www.biography.com/business-figure/steve-jobs" target="_blank" rel="noopener noreferrer">Biography.com Profile</a></li>
+            <li><a href="https://www.ted.com/talks/steve_jobs_how_to_live_before_you_die" target="_blank" rel="noopener noreferrer">Steve Jobs’ Stanford Commencement Speech</a></li>
+            <li><a href="https://www.imdb.com/title/tt2084970/" target="_blank" rel="noopener noreferrer">Steve Jobs (2015) Movie on IMDb</a></li>
+        </ul>
+    </section>
+
+    <footer id="footer">
+        <p>Designed with ❤️ by a Tech Enthusiast | Tribute to Steve Jobs</p>
+        <p>
+            <a href="https://en.wikipedia.org/wiki/Steve_Jobs" target="_blank" rel="noopener noreferrer">
+            Learn more on Wikipedia
+            </a>
+        </p>
+    </footer>
+
+
+  </main>
+    <script>
+        const navToggle = document.getElementById('nav-toggle');
+        const navLinks = document.querySelector('.nav-links');
+
+        navToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+    </script>
+</body>
+</html>

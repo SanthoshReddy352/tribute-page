@@ -1,0 +1,516 @@
+/* Reset some basic styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body and font setup */
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #111; /* fallback background */
+  color: #fff;
+}
+
+/* Hero Section */
+#hero {
+  position: relative;
+  height: 100vh; /* full viewport height */
+  background-image: url('https://upload.wikimedia.org/wikipedia/commons/8/8a/Steve_Jobs_Headshot_2010-CROP.jpg');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+/* Dark overlay to improve text visibility */
+#hero .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.6); /* 60% black overlay */
+  z-index: 1;
+}
+
+/* Content above overlay */
+#hero .hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 90%;
+  padding: 20px;
+}
+
+/* Main heading */
+#hero h1 {
+  font-size: 4rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  letter-spacing: 2px;
+}
+
+/* Quote */
+#hero .quote {
+  font-size: 1.5rem;
+  font-style: italic;
+  font-weight: 400;
+  opacity: 0.8;
+}
+
+/* General container padding */
+.section-container {
+  padding: 60px 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  flex-wrap: wrap; /* for responsiveness */
+}
+
+/* Image container */
+.bio-image {
+  flex: 1 1 300px; /* flexible width, min 300px */
+  text-align: center;
+}
+
+.bio-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Text container */
+.bio-text {
+  flex: 2 1 400px;
+  padding: 10px 0;
+}
+
+.bio-text h2 {
+  font-size: 2.25rem;
+  margin-bottom: 18px;
+  font-weight: 600;
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  letter-spacing: 1px;      /* Slight letter spacing for elegance */
+}
+
+.bio-text p {
+  font-size: 1.125rem;
+  line-height: 1.7;
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  margin-top: 0;
+  margin-bottom: 0;
+  max-width: 600px;         /* Limits width for better reading flow */
+}
+
+/* Responsive tweaks for smaller screens */
+@media (max-width: 768px) {
+  .section-container {
+    flex-direction: column;
+  }
+
+  .bio-text h2 {
+    font-size: 2rem;
+  }
+}
+
+#timeline {
+  max-width: 800px;
+  margin: 60px auto;
+  padding: 0 20px;
+}
+
+#timeline h2 {
+  font-size: 2.5rem;
+  color: white;            /* softer dark gray */
+  text-align: center;
+  margin-bottom: 40px;
+  font-weight: 600;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Timeline list styles */
+.timeline-list {
+  list-style: none;
+  padding-left: 0;
+  position: relative;
+}
+
+/* Vertical line for timeline */
+.timeline-list::before {
+  content: '';
+  position: absolute;
+  left: 15px;           /* moved left to avoid piercing years */
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background-color: #ccc;
+  border-radius: 2px;
+}
+
+/* Each timeline item */
+.timeline-list li {
+  position: relative;
+  margin-bottom: 40px;
+  padding-left: 90px;   /* increased padding to accommodate year */
+}
+
+/* Year styling */
+.timeline-list .year {
+  position: absolute;
+  left: 30px;           /* placed to the right of the vertical line */
+  top: 0;
+  width: 50px;          /* adjusted width */
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: white;
+  text-align: left;     /* left aligned text */
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Circle markers on the line */
+.timeline-list li::before {
+  content: '';
+  position: absolute;
+  left: 11px;           /* aligned with the vertical line */
+  top: 8px;
+  width: 14px;
+  height: 14px;
+  background-color: white;
+  border-radius: 50%;
+  border: 3px solid #eee;
+  box-sizing: border-box;
+}
+
+/* Description text */
+.timeline-list li p {
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: white;            /* your chosen soft gray */
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  #timeline {
+    padding: 0 10px;
+  }
+
+  .timeline-list li {
+    padding-left: 70px;  /* adjusted for smaller screens */
+  }
+
+  .timeline-list .year {
+    width: 40px;
+    font-size: 1rem;
+    left: 25px;
+  }
+
+  .timeline-list li::before {
+    left: 6px;
+    width: 12px;
+    height: 12px;
+  }
+
+  .timeline-list::before {
+    left: 10px;
+  }
+}
+
+#quotes {
+  max-width: 700px;
+  margin: 60px auto;
+  padding: 0 20px;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+}
+
+#quotes h2 {
+  font-size: 2.25rem;
+  color: white;             /* consistent with previous headings */
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+#quotes blockquote {
+  background-color: black;
+  border-left: 6px solid white;
+  margin: 20px 0;
+  padding: 20px 30px;
+  font-style: italic;
+  color: white;             /* soft gray for quote text */
+  position: relative;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#quotes blockquote footer {
+  margin-top: 15px;
+  font-style: normal;
+  font-weight: 600;
+  color: white;
+  font-size: 1rem;
+  text-align: right;
+}
+
+@media (max-width: 600px) {
+  #quotes {
+    padding: 0 15px;
+  }
+
+  #quotes blockquote {
+    padding: 15px 20px;
+  }
+}
+
+#legacy {
+  max-width: 800px;
+  margin: 60px auto;
+  padding: 0 20px;
+  color: white;
+  font-family: 'Poppins', sans-serif;
+}
+
+#legacy h2 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin-bottom: 30px;
+  text-align: center;
+  color: #fff;
+  letter-spacing: 1px;
+}
+
+.achievements-list {
+  list-style: none;
+  padding-left: 0;
+  font-size: 1.125rem;
+  line-height: 1.6;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.achievements-list li {
+  position: relative;
+  padding-left: 30px;
+  margin-bottom: 18px;
+  color: #ddd;
+}
+
+/* Custom bullet as a small circle */
+.achievements-list li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 8px;
+  width: 12px;
+  height: 12px;
+  background-color: #fff;
+  border-radius: 50%;
+}
+
+/* Responsive tweaks */
+@media (max-width: 600px) {
+  #legacy h2 {
+    font-size: 2rem;
+  }
+
+  .achievements-list {
+    font-size: 1rem;
+  }
+}
+
+#resources {
+  max-width: 800px;
+  margin: 60px auto;
+  padding: 0 20px;
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  text-align: center; /* Keep heading centered */
+}
+
+#resources h2 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin-bottom: 30px;
+  letter-spacing: 1px;
+}
+
+/* Left-align the list and its items */
+.resources-list {
+  list-style: none;
+  padding-left: 0;
+  max-width: 600px;
+  margin: 0 auto;
+  font-size: 1.125rem;
+  line-height: 1.6;
+  text-align: left;
+}
+
+.resources-list li {
+  position: relative;
+  padding-left: 24px;
+  margin-bottom: 18px;
+  color: #ddd;
+}
+
+.resources-list li a {
+  color: #61dafb;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  font-weight: 500;
+}
+
+.resources-list li a:hover,
+.resources-list li a:focus {
+  color: #21a1f1;
+  outline: none;
+  text-decoration: underline;
+}
+
+.resources-list li::before {
+  content: '';
+  position: absolute;
+  left: 4px; /* moved left from 0 */
+  top: 8px;
+  width: 12px;
+  height: 12px;
+  background-color: #fff;
+  border-radius: 50%;
+}
+/* Responsive tweaks */
+@media (max-width: 600px) {
+  #resources h2 {
+    font-size: 2rem;
+  }
+
+  .resources-list {
+    font-size: 1rem;
+  }
+}
+
+#footer {
+  background-color: #000;
+  padding: 40px 20px;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  color: #ffffff;
+  font-size: 0.95rem;
+  border-top: 1px solid #222;
+}
+
+#footer a {
+  color: #61dafb;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+#footer a:hover {
+  color: #21a1f1;
+  text-decoration: underline;
+}
+#footer p {
+  margin: 0;
+}
+
+#navbar {
+  background-color: #000;
+  padding: 15px 30px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.6);
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.nav-logo a {
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-decoration: none;
+  font-family: 'Poppins', sans-serif;
+  transition: color 0.3s ease;
+}
+
+.nav-logo a:hover {
+  color: #61dafb;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1rem;
+  font-family: 'Poppins', sans-serif;
+  transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+  color: #61dafb;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Hide hamburger by default */
+#nav-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: white;
+  cursor: pointer;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  /* Hide nav links by default */
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background-color: #111;
+    position: absolute;
+    top: 60px; /* adjust based on navbar height */
+    left: 0;
+    width: 100%;
+    padding: 10px 0;
+  }
+
+  /* Show hamburger */
+  #nav-toggle {
+    display: block;
+  }
+
+  /* Show nav links when active */
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-links li {
+    margin: 10px 0;
+    text-align: center;
+  }
+}
